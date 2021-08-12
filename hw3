@@ -19,3 +19,11 @@
 #2 - собака
 #2 - кот
 
+from collections import Counter
+text = input('Введите текст: ')
+list_text = text.lower().split()
+dict_text = Counter(list_text)
+max_text = max(dict(dict_text).values())
+repeats_text = {key: value for key, value in dict_text.items() if value == max_text}
+for key, value in repeats_text.items():
+    print (value, ' - ', key)
