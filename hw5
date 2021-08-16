@@ -13,3 +13,24 @@
 #-> 2 1 8 4 2 3 5 7 10 18 82 2
 #6
 
+text = input("Введите неотрицательные целые числа, разделенные через пробел: ").split()
+
+for i in range(len(text )):
+    text [i] = int(text [i])
+text .sort()
+
+ans = text[0]
+if ans == 1:
+    for i in range(len(text)):
+        if i == (len(text) - 1) or text[i]+1 < text[i+1]:
+            ans = text[i]+1
+            break
+else:
+    ans = 1
+print(ans)
+
+
+# с set
+not_include = set(range(1, max(text) + 2))
+not_include = not_include - set(text)
+print(min(not_include))
