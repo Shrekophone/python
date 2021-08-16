@@ -30,7 +30,4 @@ else:
 print(ans)
 
 
-# с set
-not_include = set(range(1, max(text) + 2))
-not_include = not_include - set(text)
-print(min(not_include))
+
