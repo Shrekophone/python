@@ -15,7 +15,24 @@
 #-> 123dfgdr%0&45ty-45--900
 #-777
 
-import re
+#import re        не считает знак минус         
+#text = input('Введите целые неотрицательные числа,разделенные любым не цифровым литералом: ')
+#number_text = [int(i) for i in re.findall('\d+', text)]
+#print(sum(number_text))
+
+
 text = input('Введите целые неотрицательные числа,разделенные любым не цифровым литералом: ')
-number_text = [int(i) for i in re.findall('\d+', text)]
-print(sum(number_text))
+new_text = ""
+
+
+for char in text:
+    if char in set('0123456789$,'):
+        new_text += char
+    else:
+        new_text += " "
+
+numbers = new_text.split()
+for i in range(len(numbers)):
+    numbers[i] = int(numbers[i])
+
+print(sum(numbers))
