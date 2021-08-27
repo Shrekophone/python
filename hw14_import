@@ -1,4 +1,0 @@
-import pickle
-from  hw14_programm import Employee
-emp1=pickle.load( open( "import.tmp", "rb" ) )
-emp1.print_salary_info()
