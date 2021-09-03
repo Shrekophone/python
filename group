@@ -1,2 +1,12 @@
 root:x:0:
-bin:x:1:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,giftwind
+tty:x:5:syslog
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
